@@ -1,0 +1,529 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CB23F9E519973209001CDF08 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB23F9E419973209001CDF08 /* Foundation.framework */; };
+		CB23F9E719973209001CDF08 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB23F9E619973209001CDF08 /* CoreGraphics.framework */; };
+		CB23F9E919973209001CDF08 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB23F9E819973209001CDF08 /* UIKit.framework */; };
+		CB23F9EF19973209001CDF08 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CB23F9ED19973209001CDF08 /* InfoPlist.strings */; };
+		CB23F9F119973209001CDF08 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CB23F9F019973209001CDF08 /* main.m */; };
+		CB23F9F519973209001CDF08 /* BIDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CB23F9F419973209001CDF08 /* BIDAppDelegate.m */; };
+		CB23F9F719973209001CDF08 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB23F9F619973209001CDF08 /* Images.xcassets */; };
+		CB23F9FE19973209001CDF08 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB23F9FD19973209001CDF08 /* XCTest.framework */; };
+		CB23F9FF19973209001CDF08 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB23F9E419973209001CDF08 /* Foundation.framework */; };
+		CB23FA0019973209001CDF08 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB23F9E819973209001CDF08 /* UIKit.framework */; };
+		CB23FA0819973209001CDF08 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CB23FA0619973209001CDF08 /* InfoPlist.strings */; };
+		CB23FA0A19973209001CDF08 /* MacysProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CB23FA0919973209001CDF08 /* MacysProjectTests.m */; };
+		CB23FA141997322A001CDF08 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB23FA131997322A001CDF08 /* MainStoryboard.storyboard */; };
+		CB23FA1719973328001CDF08 /* BIDCreateProductController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB23FA1619973328001CDF08 /* BIDCreateProductController.m */; };
+		CB23FA1A19973535001CDF08 /* BIDProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = CB23FA1919973535001CDF08 /* BIDProduct.m */; };
+		CB23FA1C199744D8001CDF08 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CB23FA1B199744D8001CDF08 /* libsqlite3.dylib */; };
+		CB23FA1F19975C83001CDF08 /* BIDShowProductController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB23FA1E19975C83001CDF08 /* BIDShowProductController.m */; };
+		CB23FA21199770DC001CDF08 /* default-user-image.png in Resources */ = {isa = PBXBuildFile; fileRef = CB23FA20199770DC001CDF08 /* default-user-image.png */; };
+		CB23FA251997722F001CDF08 /* BIDProductDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB23FA241997722F001CDF08 /* BIDProductDetailController.m */; };
+		CB23FA291997FA94001CDF08 /* shoe.png in Resources */ = {isa = PBXBuildFile; fileRef = CB23FA261997FA94001CDF08 /* shoe.png */; };
+		CB23FA2A1997FA94001CDF08 /* sock.png in Resources */ = {isa = PBXBuildFile; fileRef = CB23FA271997FA94001CDF08 /* sock.png */; };
+		CB23FA2B1997FA94001CDF08 /* shirt.png in Resources */ = {isa = PBXBuildFile; fileRef = CB23FA281997FA94001CDF08 /* shirt.png */; };
+		CB7B0F0A1998551900F7787F /* BIDProductImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7B0F091998551900F7787F /* BIDProductImageController.m */; };
+		CB7B0F1119985FDE00F7787F /* BIDEditProductController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7B0F0F19985FDE00F7787F /* BIDEditProductController.m */; };
+		CB7B0F1219985FDE00F7787F /* BIDEditProductController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB7B0F1019985FDE00F7787F /* BIDEditProductController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CB23FA0119973209001CDF08 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CB23F9D919973209001CDF08 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CB23F9E019973209001CDF08;
+			remoteInfo = MacysProject;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CB23F9E119973209001CDF08 /* MacysProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacysProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB23F9E419973209001CDF08 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CB23F9E619973209001CDF08 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		CB23F9E819973209001CDF08 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		CB23F9EC19973209001CDF08 /* MacysProject-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MacysProject-Info.plist"; sourceTree = "<group>"; };
+		CB23F9EE19973209001CDF08 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CB23F9F019973209001CDF08 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CB23F9F219973209001CDF08 /* MacysProject-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MacysProject-Prefix.pch"; sourceTree = "<group>"; };
+		CB23F9F319973209001CDF08 /* BIDAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BIDAppDelegate.h; sourceTree = "<group>"; };
+		CB23F9F419973209001CDF08 /* BIDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BIDAppDelegate.m; sourceTree = "<group>"; };
+		CB23F9F619973209001CDF08 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CB23F9FC19973209001CDF08 /* MacysProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MacysProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB23F9FD19973209001CDF08 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		CB23FA0519973209001CDF08 /* MacysProjectTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MacysProjectTests-Info.plist"; sourceTree = "<group>"; };
+		CB23FA0719973209001CDF08 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CB23FA0919973209001CDF08 /* MacysProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MacysProjectTests.m; sourceTree = "<group>"; };
+		CB23FA131997322A001CDF08 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = MainStoryboard.storyboard; path = ../MainStoryboard.storyboard; sourceTree = "<group>"; };
+		CB23FA1519973328001CDF08 /* BIDCreateProductController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BIDCreateProductController.h; sourceTree = "<group>"; };
+		CB23FA1619973328001CDF08 /* BIDCreateProductController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BIDCreateProductController.m; sourceTree = "<group>"; };
+		CB23FA1819973535001CDF08 /* BIDProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BIDProduct.h; sourceTree = "<group>"; };
+		CB23FA1919973535001CDF08 /* BIDProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BIDProduct.m; sourceTree = "<group>"; };
+		CB23FA1B199744D8001CDF08 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		CB23FA1D19975C83001CDF08 /* BIDShowProductController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BIDShowProductController.h; sourceTree = "<group>"; };
+		CB23FA1E19975C83001CDF08 /* BIDShowProductController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BIDShowProductController.m; sourceTree = "<group>"; };
+		CB23FA20199770DC001CDF08 /* default-user-image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default-user-image.png"; sourceTree = "<group>"; };
+		CB23FA231997722F001CDF08 /* BIDProductDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BIDProductDetailController.h; sourceTree = "<group>"; };
+		CB23FA241997722F001CDF08 /* BIDProductDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BIDProductDetailController.m; sourceTree = "<group>"; };
+		CB23FA261997FA94001CDF08 /* shoe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shoe.png; sourceTree = "<group>"; };
+		CB23FA271997FA94001CDF08 /* sock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sock.png; sourceTree = "<group>"; };
+		CB23FA281997FA94001CDF08 /* shirt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shirt.png; sourceTree = "<group>"; };
+		CB7B0F081998551900F7787F /* BIDProductImageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BIDProductImageController.h; sourceTree = "<group>"; };
+		CB7B0F091998551900F7787F /* BIDProductImageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BIDProductImageController.m; sourceTree = "<group>"; };
+		CB7B0F0E19985FDE00F7787F /* BIDEditProductController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BIDEditProductController.h; path = ../BIDEditProductController.h; sourceTree = "<group>"; };
+		CB7B0F0F19985FDE00F7787F /* BIDEditProductController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BIDEditProductController.m; path = ../BIDEditProductController.m; sourceTree = "<group>"; };
+		CB7B0F1019985FDE00F7787F /* BIDEditProductController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BIDEditProductController.xib; path = ../BIDEditProductController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CB23F9DE19973209001CDF08 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB23FA1C199744D8001CDF08 /* libsqlite3.dylib in Frameworks */,
+				CB23F9E719973209001CDF08 /* CoreGraphics.framework in Frameworks */,
+				CB23F9E919973209001CDF08 /* UIKit.framework in Frameworks */,
+				CB23F9E519973209001CDF08 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB23F9F919973209001CDF08 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB23F9FE19973209001CDF08 /* XCTest.framework in Frameworks */,
+				CB23FA0019973209001CDF08 /* UIKit.framework in Frameworks */,
+				CB23F9FF19973209001CDF08 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CB23F9D819973209001CDF08 = {
+			isa = PBXGroup;
+			children = (
+				CB23F9EA19973209001CDF08 /* MacysProject */,
+				CB23FA0319973209001CDF08 /* MacysProjectTests */,
+				CB23F9E319973209001CDF08 /* Frameworks */,
+				CB23F9E219973209001CDF08 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CB23F9E219973209001CDF08 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CB23F9E119973209001CDF08 /* MacysProject.app */,
+				CB23F9FC19973209001CDF08 /* MacysProjectTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CB23F9E319973209001CDF08 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CB23FA1B199744D8001CDF08 /* libsqlite3.dylib */,
+				CB23F9E419973209001CDF08 /* Foundation.framework */,
+				CB23F9E619973209001CDF08 /* CoreGraphics.framework */,
+				CB23F9E819973209001CDF08 /* UIKit.framework */,
+				CB23F9FD19973209001CDF08 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CB23F9EA19973209001CDF08 /* MacysProject */ = {
+			isa = PBXGroup;
+			children = (
+				CB23F9F319973209001CDF08 /* BIDAppDelegate.h */,
+				CB23F9F419973209001CDF08 /* BIDAppDelegate.m */,
+				CB23F9F619973209001CDF08 /* Images.xcassets */,
+				CB23F9EB19973209001CDF08 /* Supporting Files */,
+				CB23FA131997322A001CDF08 /* MainStoryboard.storyboard */,
+				CB23FA1819973535001CDF08 /* BIDProduct.h */,
+				CB23FA1919973535001CDF08 /* BIDProduct.m */,
+				CB23FA1519973328001CDF08 /* BIDCreateProductController.h */,
+				CB23FA1619973328001CDF08 /* BIDCreateProductController.m */,
+				CB23FA1D19975C83001CDF08 /* BIDShowProductController.h */,
+				CB23FA1E19975C83001CDF08 /* BIDShowProductController.m */,
+				CB23FA231997722F001CDF08 /* BIDProductDetailController.h */,
+				CB23FA241997722F001CDF08 /* BIDProductDetailController.m */,
+				CB7B0F081998551900F7787F /* BIDProductImageController.h */,
+				CB7B0F091998551900F7787F /* BIDProductImageController.m */,
+				CB7B0F0E19985FDE00F7787F /* BIDEditProductController.h */,
+				CB7B0F0F19985FDE00F7787F /* BIDEditProductController.m */,
+				CB7B0F1019985FDE00F7787F /* BIDEditProductController.xib */,
+				CB23FA22199770E1001CDF08 /* Images */,
+			);
+			path = MacysProject;
+			sourceTree = "<group>";
+		};
+		CB23F9EB19973209001CDF08 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CB23F9EC19973209001CDF08 /* MacysProject-Info.plist */,
+				CB23F9ED19973209001CDF08 /* InfoPlist.strings */,
+				CB23F9F019973209001CDF08 /* main.m */,
+				CB23F9F219973209001CDF08 /* MacysProject-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CB23FA0319973209001CDF08 /* MacysProjectTests */ = {
+			isa = PBXGroup;
+			children = (
+				CB23FA0919973209001CDF08 /* MacysProjectTests.m */,
+				CB23FA0419973209001CDF08 /* Supporting Files */,
+			);
+			path = MacysProjectTests;
+			sourceTree = "<group>";
+		};
+		CB23FA0419973209001CDF08 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CB23FA0519973209001CDF08 /* MacysProjectTests-Info.plist */,
+				CB23FA0619973209001CDF08 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CB23FA22199770E1001CDF08 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				CB23FA261997FA94001CDF08 /* shoe.png */,
+				CB23FA271997FA94001CDF08 /* sock.png */,
+				CB23FA281997FA94001CDF08 /* shirt.png */,
+				CB23FA20199770DC001CDF08 /* default-user-image.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CB23F9E019973209001CDF08 /* MacysProject */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB23FA0D19973209001CDF08 /* Build configuration list for PBXNativeTarget "MacysProject" */;
+			buildPhases = (
+				CB23F9DD19973209001CDF08 /* Sources */,
+				CB23F9DE19973209001CDF08 /* Frameworks */,
+				CB23F9DF19973209001CDF08 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MacysProject;
+			productName = MacysProject;
+			productReference = CB23F9E119973209001CDF08 /* MacysProject.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CB23F9FB19973209001CDF08 /* MacysProjectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB23FA1019973209001CDF08 /* Build configuration list for PBXNativeTarget "MacysProjectTests" */;
+			buildPhases = (
+				CB23F9F819973209001CDF08 /* Sources */,
+				CB23F9F919973209001CDF08 /* Frameworks */,
+				CB23F9FA19973209001CDF08 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CB23FA0219973209001CDF08 /* PBXTargetDependency */,
+			);
+			name = MacysProjectTests;
+			productName = MacysProjectTests;
+			productReference = CB23F9FC19973209001CDF08 /* MacysProjectTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CB23F9D919973209001CDF08 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = BID;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "___Jose-Alvarado___";
+				TargetAttributes = {
+					CB23F9FB19973209001CDF08 = {
+						TestTargetID = CB23F9E019973209001CDF08;
+					};
+				};
+			};
+			buildConfigurationList = CB23F9DC19973209001CDF08 /* Build configuration list for PBXProject "MacysProject" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CB23F9D819973209001CDF08;
+			productRefGroup = CB23F9E219973209001CDF08 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CB23F9E019973209001CDF08 /* MacysProject */,
+				CB23F9FB19973209001CDF08 /* MacysProjectTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CB23F9DF19973209001CDF08 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB23FA141997322A001CDF08 /* MainStoryboard.storyboard in Resources */,
+				CB23FA291997FA94001CDF08 /* shoe.png in Resources */,
+				CB23F9EF19973209001CDF08 /* InfoPlist.strings in Resources */,
+				CB23FA21199770DC001CDF08 /* default-user-image.png in Resources */,
+				CB23F9F719973209001CDF08 /* Images.xcassets in Resources */,
+				CB23FA2B1997FA94001CDF08 /* shirt.png in Resources */,
+				CB23FA2A1997FA94001CDF08 /* sock.png in Resources */,
+				CB7B0F1219985FDE00F7787F /* BIDEditProductController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB23F9FA19973209001CDF08 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB23FA0819973209001CDF08 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CB23F9DD19973209001CDF08 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB7B0F0A1998551900F7787F /* BIDProductImageController.m in Sources */,
+				CB23FA251997722F001CDF08 /* BIDProductDetailController.m in Sources */,
+				CB23F9F519973209001CDF08 /* BIDAppDelegate.m in Sources */,
+				CB23FA1F19975C83001CDF08 /* BIDShowProductController.m in Sources */,
+				CB23FA1719973328001CDF08 /* BIDCreateProductController.m in Sources */,
+				CB23F9F119973209001CDF08 /* main.m in Sources */,
+				CB23FA1A19973535001CDF08 /* BIDProduct.m in Sources */,
+				CB7B0F1119985FDE00F7787F /* BIDEditProductController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB23F9F819973209001CDF08 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB23FA0A19973209001CDF08 /* MacysProjectTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CB23FA0219973209001CDF08 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CB23F9E019973209001CDF08 /* MacysProject */;
+			targetProxy = CB23FA0119973209001CDF08 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CB23F9ED19973209001CDF08 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB23F9EE19973209001CDF08 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		CB23FA0619973209001CDF08 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB23FA0719973209001CDF08 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CB23FA0B19973209001CDF08 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CB23FA0C19973209001CDF08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CB23FA0E19973209001CDF08 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MacysProject/MacysProject-Prefix.pch";
+				INFOPLIST_FILE = "MacysProject/MacysProject-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		CB23FA0F19973209001CDF08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MacysProject/MacysProject-Prefix.pch";
+				INFOPLIST_FILE = "MacysProject/MacysProject-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		CB23FA1119973209001CDF08 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MacysProject.app/MacysProject";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MacysProject/MacysProject-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "MacysProjectTests/MacysProjectTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		CB23FA1219973209001CDF08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MacysProject.app/MacysProject";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MacysProject/MacysProject-Prefix.pch";
+				INFOPLIST_FILE = "MacysProjectTests/MacysProjectTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CB23F9DC19973209001CDF08 /* Build configuration list for PBXProject "MacysProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB23FA0B19973209001CDF08 /* Debug */,
+				CB23FA0C19973209001CDF08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB23FA0D19973209001CDF08 /* Build configuration list for PBXNativeTarget "MacysProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB23FA0E19973209001CDF08 /* Debug */,
+				CB23FA0F19973209001CDF08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB23FA1019973209001CDF08 /* Build configuration list for PBXNativeTarget "MacysProjectTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB23FA1119973209001CDF08 /* Debug */,
+				CB23FA1219973209001CDF08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CB23F9D919973209001CDF08 /* Project object */;
+}
