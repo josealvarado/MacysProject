@@ -32,19 +32,19 @@
 }
 
 - (void) viewWillAppear:(BOOL)animated{
-    UIImage *image = [UIImage imageNamed:_product.image];
+    UIImage *image = [UIImage imageNamed:self.product.image];
     [self.buttonImage setBackgroundImage:image forState:UIControlStateNormal];
-    _labelID.text = [NSString stringWithFormat:@"%d", _product.prouctID];
-    _labelName.text = _product.name;
-    _labelPrice.text = [NSString stringWithFormat:@"%.2f", _product.regularPrice];
-    _labelSalePrice.text = [NSString stringWithFormat:@"%.2f", _product.salePrice];
-    _textViewColors.text = [_product.colors componentsJoinedByString:@", "];
-    _textViewDescription.text = _product.description;
-    _textViewStores.text = [self fixDictionary:_product.stores];
+    self.labelID.text = [NSString stringWithFormat:@"%d", self.product.prouctID];
+    self.labelName.text = self.product.name;
+    self.labelPrice.text = [NSString stringWithFormat:@"%.2f", self.product.regularPrice];
+    self.labelSalePrice.text = [NSString stringWithFormat:@"%.2f", self.product.salePrice];
+    self.textViewColors.text = [self.product.colors componentsJoinedByString:@", "];
+    self.textViewDescription.text = self.product.description;
+    self.textViewStores.text = [self fixDictionary:self.product.stores];
 }
 
 - (void)updateProduct:(BIDProduct *)product{
-    _product = product;
+    self.product = product;
     
     sqlite3 *database;
     if (sqlite3_open([[self dataFilePath] UTF8String], &database) != SQLITE_OK){
@@ -53,13 +53,13 @@
     }
     
     NSError *error;
-    NSData *jsonColorData = [NSJSONSerialization dataWithJSONObject:_product.colors options:NSJSONWritingPrettyPrinted error:&error];
+    NSData *jsonColorData = [NSJSONSerialization dataWithJSONObject:self.product.colors options:NSJSONWritingPrettyPrinted error:&error];
     NSString *jsonColors = [[NSString alloc] initWithData:jsonColorData encoding:NSUTF8StringEncoding];
     
-    NSData *jsonStoreData = [NSJSONSerialization dataWithJSONObject:_product.stores options:NSJSONWritingPrettyPrinted error:&error];
+    NSData *jsonStoreData = [NSJSONSerialization dataWithJSONObject:self.product.stores options:NSJSONWritingPrettyPrinted error:&error];
     NSString *jsonStores = [[NSString alloc] initWithData:jsonStoreData encoding:NSUTF8StringEncoding];
     
-    NSString *removeKeyword = [NSString stringWithFormat:@"UPDATE PRODUCTS SET NAME = '%@', PRICE = %f, SALE_PRICE = %f, DESCRIPTION = '%@', COLORS = '%@', STORES = '%@' WHERE ROW = %d", _product.name, product.regularPrice, product.salePrice, _product.description, jsonColors, jsonStores,  _product.prouctID];
+    NSString *removeKeyword = [NSString stringWithFormat:@"UPDATE PRODUCTS SET NAME = '%@', PRICE = %f, SALE_PRICE = %f, DESCRIPTION = '%@', COLORS = '%@', STORES = '%@' WHERE ROW = %d", self.product.name, self.product.regularPrice, self.product.salePrice, self.product.description, jsonColors, jsonStores,  self.product.prouctID];
     
     sqlite3_stmt *statement;
     const char *errorMsg = NULL;
@@ -116,7 +116,7 @@
     }
     if ([destination respondsToSelector:@selector(setSelection2:)]){
         
-        NSDictionary *dict = @{@"name": _product.image};
+        NSDictionary *dict = @{@"name": self.product.image};
         
         [destination setValue:dict forKey:@"selection2"];
     }
@@ -173,13 +173,13 @@
         
         BIDEditProductController *editProduct = [[BIDEditProductController alloc] init];
         editProduct.delegate = self;
-        [editProduct setProduct:_product];
+        [editProduct setProduct:self.product];
         
         [self.navigationController pushViewController:editProduct animated:YES];
     }
 }
 
--(NSString *) dataFilePath
+- (NSString *) dataFilePath
 {
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];

@@ -35,7 +35,7 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated{
-    _products = [[NSMutableArray alloc] init];
+    self.products = [[NSMutableArray alloc] init];
     
     sqlite3 *database;
     if (sqlite3_open([[self dataFilePath] UTF8String], &database) != SQLITE_OK){
@@ -95,7 +95,7 @@
             product.colors = [array mutableCopy];
             product.stores = dict;
             
-            [_products addObject:product];
+            [self.products addObject:product];
             
         }
         sqlite3_finalize(statement);
@@ -103,13 +103,13 @@
     
     sqlite3_close(database);
     
-//    NSLog(@"product size = %d", [_products count]);
+//    NSLog(@"product size = %d", [self.products count]);
     
     [self.tableView reloadData];
 
 }
 
--(NSString *) dataFilePath
+- (NSString *) dataFilePath
 {
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
@@ -134,7 +134,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [_products count];
+    return [self.products count];
 }
 
 
@@ -204,7 +204,7 @@
     if ([destination respondsToSelector:@selector(setSelection:)]){
         NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
         
-        BIDProduct *product = [_products objectAtIndex:indexPath.row];
+        BIDProduct *product = [self.products objectAtIndex:indexPath.row];
         NSDictionary *selection = @{@"indexPath" : indexPath,
                                     @"object" : product.name};
         [destination setValue:selection forKey:@"selection"];

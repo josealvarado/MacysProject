@@ -51,45 +51,45 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated{
-    _textFieldName.text = _product.name;
+    self.textFieldName.text = self.product.name;
     
-    _textFieldPrice.text = [NSString stringWithFormat:@"%.2f", _product.regularPrice];
-    _textFieldSalePrice.text = [NSString stringWithFormat:@"%.2f", _product.salePrice];
-    _textViewDescription.text = _product.description;
+    self.textFieldPrice.text = [NSString stringWithFormat:@"%.2f", self.product.regularPrice];
+    self.textFieldSalePrice.text = [NSString stringWithFormat:@"%.2f", self.product.salePrice];
+    self.textViewDescription.text = self.product.description;
     
-    _buttonGreen.selected = NO;
-    _buttonRed.selected = NO;
-    _buttonBlue.selected = NO;
+    self.buttonGreen.selected = NO;
+    self.buttonRed.selected = NO;
+    self.buttonBlue.selected = NO;
     
-    for (int i = 0; i < [_product.colors count]; i++) {
-        NSString *color = [_product.colors objectAtIndex:i];
+    for (int i = 0; i < [self.product.colors count]; i++) {
+        NSString *color = [self.product.colors objectAtIndex:i];
         if ([color isEqualToString:@"green"]) {
-            _buttonGreen.selected = YES;
+            self.buttonGreen.selected = YES;
         } else if ([color isEqualToString:@"red"]){
-            _buttonRed.selected = YES;
+            self.buttonRed.selected = YES;
         } else {
-            _buttonBlue.selected = YES;
+            self.buttonBlue.selected = YES;
         }
     }
     
-    _buttonSalem.selected = NO;
-    _buttonPortland.selected = NO;
-    _buttonSacramento.selected = NO;
-    _buttonSanFrancisco.selected = NO;
+    self.buttonSalem.selected = NO;
+    self.buttonPortland.selected = NO;
+    self.buttonSacramento.selected = NO;
+    self.buttonSanFrancisco.selected = NO;
     
-    for (NSString *key in _product.stores) {
-        NSArray *subArray = [_product.stores objectForKey:key];
+    for (NSString *key in self.product.stores) {
+        NSArray *subArray = [self.product.stores objectForKey:key];
         
         for (int i = 0; i < [subArray count]; i++) {
             NSString *city = [subArray objectAtIndex:i];
             if ([city isEqualToString:@"Salem"]) {
-                _buttonSalem.selected = YES;
+                self.buttonSalem.selected = YES;
             } else if ([city isEqualToString:@"Portland"]){
-                _buttonPortland.selected = YES;
+                self.buttonPortland.selected = YES;
             } else if ([city isEqualToString:@"Sacramento"]){
-                _buttonSacramento.selected = YES;
+                self.buttonSacramento.selected = YES;
             } else {
-                _buttonSanFrancisco.selected = YES;
+                self.buttonSanFrancisco.selected = YES;
             }
         }
     }
@@ -97,7 +97,7 @@
 }
 
 - (void) setProduct:(BIDProduct *)product{
-    _product = product;
+    self.product = product;
 }
 
 - (void)didReceiveMemoryWarning
@@ -107,45 +107,45 @@
 }
 
 - (void)buttonSave:(id)sender {
-    _product.name = _textFieldName.text;
-    _product.regularPrice = [_textFieldPrice.text doubleValue];
-    _product.salePrice = [_textFieldSalePrice.text doubleValue];
-    _product.description = _textViewDescription.text;
+    self.product.name = self.textFieldName.text;
+    self.product.regularPrice = [self.textFieldPrice.text doubleValue];
+    self.product.salePrice = [self.textFieldSalePrice.text doubleValue];
+    self.product.description = self.textViewDescription.text;
     
     NSMutableArray *newColors = [[NSMutableArray alloc] init];
-    if (_buttonGreen.selected) {
+    if (self.buttonGreen.selected) {
         [newColors addObject:@"green"];
     }
-    if (_buttonRed.selected) {
+    if (self.buttonRed.selected) {
         [newColors addObject:@"red"];
     }
-    if (_buttonBlue.selected) {
+    if (self.buttonBlue.selected) {
         [newColors addObject:@"blue"];
     }
-    _product.colors = newColors;
+    self.product.colors = newColors;
     
     NSMutableDictionary *newStores = [[NSMutableDictionary alloc] init];
-    if (_buttonPortland.selected || _buttonSalem.selected) {
+    if (self.buttonPortland.selected || self.buttonSalem.selected) {
         NSMutableArray *stores = [[NSMutableArray alloc] init];
-        if (_buttonPortland.selected) {
+        if (self.buttonPortland.selected) {
             [stores addObject:@"Portland"];
         }
-        if (_buttonSalem.selected){
+        if (self.buttonSalem.selected){
             [stores addObject:@"Salem"];
         }
         [newStores setValue:stores forKeyPath:@"Oregon"];
     }
-    if (_buttonSacramento.selected || _buttonSanFrancisco.selected) {
+    if (self.buttonSacramento.selected || self.buttonSanFrancisco.selected) {
         NSMutableArray *stores = [[NSMutableArray alloc] init];
-        if (_buttonSacramento.selected) {
+        if (self.buttonSacramento.selected) {
             [stores addObject:@"Sacramento"];
         }
-        if (_buttonSanFrancisco.selected){
+        if (self.buttonSanFrancisco.selected){
             [stores addObject:@"San Francisco"];
         }
         [newStores setValue:stores forKeyPath:@"California"];
     }
-    _product.stores = newStores;
+    self.product.stores = newStores;
     
     id<BIDEditProductControllerDelegate> editDelegate = self.delegate;
     
@@ -155,15 +155,15 @@
 }
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
-    _currentResponder = textField;
+    self.currentResponder = textField;
 }
 
 - (void)textViewDidBeginEditing:(UITextView *)textView{
-    _currentResponder = textView;
+    self.currentResponder = textView;
 }
 
 -(void)didTapAnywhere: (UITapGestureRecognizer*) recognizer {
-    [_currentResponder resignFirstResponder];
+    [self.currentResponder resignFirstResponder];
 }
 
 - (IBAction)buttonSelected:(id)sender {

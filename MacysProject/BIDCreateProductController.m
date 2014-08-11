@@ -37,8 +37,8 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    _products = [@[@"Product 1", @"Prouduct 2", @"Product 3"] mutableCopy];
-    _images = [@[@"shoe.png", @"sock.png", @"shirt.png"] mutableCopy];
+    self.products = [@[@"Product 1", @"Prouduct 2", @"Product 3"] mutableCopy];
+    self.images = [@[@"shoe.png", @"sock.png", @"shirt.png"] mutableCopy];
     
     sqlite3 *database;
     if (sqlite3_open([[self dataFilePath] UTF8String], &database) != SQLITE_OK){
@@ -66,7 +66,7 @@
     sqlite3_close(database);
 }
 
--(NSString *) dataFilePath
+- (NSString *) dataFilePath
 {
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
@@ -100,7 +100,7 @@
     
     // Configure the cell...
     
-    cell.textLabel.text = [_products objectAtIndex:indexPath.row];
+    cell.textLabel.text = [self.products objectAtIndex:indexPath.row];
     
     return cell;
 }
@@ -148,11 +148,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *productName = [_products objectAtIndex:indexPath.row];
+    NSString *productName = [self.products objectAtIndex:indexPath.row];
     NSString *productDescription = @"Description";
     double price = 5.0;
     double sale_price = 3.0;
-    NSString *image = [_images objectAtIndex:indexPath.row];
+    NSString *image = [self.images objectAtIndex:indexPath.row];
     
     NSArray *colors = @[@"green", @"red", @"blue"];
     NSDictionary *stores = @{@"Oregon": @[@"Salem", @"Portland"], @"California": @[@"San Francisco", @"Sacramento"]};

@@ -28,7 +28,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [_viewProductImage setImage:[UIImage imageNamed:[_selection2 objectForKey:@"name"]]];
+    [self.viewProductImage setImage:[UIImage imageNamed:[self.selection2 objectForKey:@"name"]]];
 }
 
 - (void)didReceiveMemoryWarning
